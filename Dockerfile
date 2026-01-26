@@ -1,4 +1,4 @@
-FROM node:18-bullseye-slim
+FROM node:20-bullseye-slim
 
 # precisa de git para dependências via git
 RUN apt-get update && apt-get install -y git \
@@ -14,4 +14,3 @@ RUN npm run build
 
 EXPOSE 8080
 CMD ["npm","run","start"]
-
