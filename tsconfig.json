@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES2019",
+    "target": "es2020",
     "module": "commonjs",
-    "rootDir": "src",
-    "outDir": "dist",
+    "outDir": "./dist",
     "strict": false,
+    "strictPropertyInitialization": false,
     "esModuleInterop": true,
-    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "skipLibCheck": true,
-    "sourceMap": false
+    "forceConsistentCasingInFileNames": true,
+	"types": ["node"]
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+    "exclude": ["public"]
 }
