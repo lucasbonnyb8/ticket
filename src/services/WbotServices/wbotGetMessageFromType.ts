@@ -75,7 +75,8 @@ export const getGroupInviteMessage = (msg: proto.IWebMessageInfo) => {
 
 // Função para extrair informações de mensagens de chamada
 export const getCallMessage = (msg: proto.IWebMessageInfo) => {
-  return msg.message?.bcallMessage?.sessionId;
+  const message: any = msg.message;
+  return message?.callMessage?.callId || message?.bcallMessage?.sessionId;
 };
 
 export const getViewOnceMessage = (msg: proto.IWebMessageInfo): string => {
